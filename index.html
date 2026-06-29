@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zhuoxuan Yu — Personal Website</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Miranda</a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home<span class="nav-dot"></span></a></li>
+    <li><a href="bio.html">Bio</a></li>
+    <li><a href="projects.html">Projects</a></li>
+  </ul>
+</nav>
+
+<!-- ── HERO (original style) ── -->
+<div class="page-wrap">
+  <section class="home-hero">
+    <div class="home-bg-circle hc1"></div>
+    <div class="home-bg-circle hc2"></div>
+
+    <div class="home-waveform" aria-hidden="true">
+      <span style="height:16px;animation-delay:0s"></span>
+      <span style="height:30px;animation-delay:0.1s"></span>
+      <span style="height:48px;animation-delay:0.2s"></span>
+      <span style="height:64px;animation-delay:0.3s"></span>
+      <span style="height:40px;animation-delay:0.4s"></span>
+      <span style="height:56px;animation-delay:0.5s"></span>
+      <span style="height:32px;animation-delay:0.6s"></span>
+      <span style="height:44px;animation-delay:0.7s"></span>
+      <span style="height:20px;animation-delay:0.8s"></span>
+      <span style="height:14px;animation-delay:0.9s"></span>
+    </div>
+
+    <div class="home-inner">
+      <div class="home-eyebrow">high school dev · builder · learner</div>
+      <div class="home-name">Zhuoxuan(Miranda) Yu<span>.</span></div>
+      <div class="home-subtitle">Enhance Life Through Technology ♡</div>
+      <p class="home-desc">
+        Write a short intro here. I love <strong>AI</strong>, <strong>music</strong>, and <strong>math</strong>.
+        Replace this with your own words.
+      </p>
+      <div class="home-tags">
+        <span class="home-tag">Python</span>
+        <span class="home-tag">Machine Learning</span>
+        <span class="home-tag">Audio Tech</span>
+        <span class="home-tag">Math & Science</span>
+        <span class="home-tag">Music + AI</span>
+      </div>
+      <div class="home-cta">
+        <!-- Internal page: href="projects.html"  |  External site: href="https://..." -->
+        <a href="projects.html" class="btn-primary">See my projects →</a>
+        <a href="bio.html" class="btn-secondary">About me</a>
+        <a href="#trivia" class="btn-secondary">Play trivia ↓</a>
+      </div>
+      <div class="home-stats">
+        <div>
+          <div class="stat-num">4+</div>
+          <div class="stat-label">Projects built</div>
+        </div>
+        <div>
+          <div class="stat-num">♪</div>
+          <div class="stat-label">Music lover</div>
+        </div>
+        <div>
+          <div class="stat-num">∞</div>
+          <div class="stat-label">Curiosity</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TRIVIA (below hero) ── -->
+  <section id="trivia" class="trivia-section">
+    <div class="section-eyebrow">how well do you know me?</div>
+    <div class="section-title">Personal <em>Trivia</em></div>
+
+    <div class="trivia-card">
+      <div id="trivia-start" class="trivia-start">
+        <p style="font-size:14px;color:var(--muted);margin-bottom:24px;line-height:1.6;">
+          Answer a few questions about me — then explore my bio and projects.
+        </p>
+        <button class="btn-primary" onclick="startGame()">Start quiz →</button>
+      </div>
+
+      <div id="trivia-game" style="display:none;">
+        <div class="trivia-progress">
+          <span id="question-count">Question 1 of 5</span>
+          <span class="trivia-score">Score: <span id="score">0</span></span>
+        </div>
+        <div class="trivia-question" id="question-text"></div>
+        <div class="trivia-options" id="options"></div>
+        <div class="trivia-feedback" id="feedback"></div>
+        <div class="trivia-actions">
+          <button class="btn-primary" id="next-btn" onclick="nextQuestion()" disabled>Next →</button>
+          <button class="btn-secondary" onclick="resetGame()">Restart</button>
+        </div>
+      </div>
+
+      <div id="trivia-end" class="trivia-end" style="display:none;">
+        <h2 id="final-title">Nice!</h2>
+        <p id="final-message"></p>
+        <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
+          <a href="bio.html" class="btn-primary">Read my bio</a>
+          <a href="projects.html" class="btn-secondary">See projects</a>
+          <button class="btn-secondary" onclick="resetGame()">Play again</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-name">Zhuoxuan Yu</div>
+        <p>Benefiting life and future through technology.</p>
+        <div class="footer-social">
+          <!-- Replace href="#" with your real links -->
+          <a href="https://github.com/Zhuo-Xuan" class="social-btn" title="GitHub" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/miranda-zhuoxuan-yu/" class="social-btn" title="LinkedIn" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="mailto:luanbusangSAIGAO@gmail.com" class="social-btn" title="Email">
+            <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+          </a>
+          <a href="https://yourportfolio.com" class="social-btn" title="Portfolio" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-links-group">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="bio.html">Bio</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="#trivia">Trivia</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-group">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:luanbusangSAIGAO@gmail.com">luanbusangSAIGAO@gmail.com</a></li>
+          <li><a href="https://github.com/Zhuo-Xuan" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/miranda-zhuoxuan-yu/" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Zhuoxuan Yu · All rights reserved</p>
+      <div class="footer-tagline">People-Oriented ♪</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/*
+  ADD YOUR OWN QUESTIONS — copy a block and paste inside the array:
+  { question: "...", options: ["A","B","C","D"], correct: "A", hint: "..." }
+*/
+const QUESTIONS = [
+  {
+    question: "What do I love building the most?",
+    options: ["AI tools", "Mobile games", "Cooking apps", "Weather widgets"],
+    correct: "AI tools",
+    hint: "Check my projects page — most of them use AI."
+  },
+  {
+    question: "Which project helps beginner singers?",
+    options: ["Greenstyle", "Vocal Singing Assistant", "Book2nd Trade", "Produtrack"],
+    correct: "Vocal Singing Assistant",
+    hint: "It predicts melody without sheet music."
+  },
+  {
+    question: "Which app uses the Feynman learning technique?",
+    options: ["Feynman AI Learning App", "Missing Animal Forum", "Partnership Communication Assistant", "Produtrack"],
+    correct: "Feynman AI Learning App",
+    hint: "Named after a famous physicist's teaching method."
+  },
+  {
+    question: "Which project is about lost pets?",
+    options: ["Book2nd Trade", "Missing Animal Forum", "Greenstyle", "Partnership Communication Assistant"],
+    correct: "Missing Animal Forum",
+    hint: "A community forum for reuniting animals with owners."
+  },
+  {
+    question: "What language do I mostly code in?",
+    options: ["Python", "Java", "C++", "Ruby"],
+    correct: "Python",
+    hint: "Common choice for AI and web backends."
+  }
+];
+
+let currentIndex = 0;
+let score = 0;
+let answered = false;
+
+function startGame() {
+  currentIndex = 0;
+  score = 0;
+  document.getElementById('trivia-start').style.display = 'none';
+  document.getElementById('trivia-end').style.display = 'none';
+  document.getElementById('trivia-game').style.display = 'block';
+  showQuestion();
+}
+
+function showQuestion() {
+  answered = false;
+  const q = QUESTIONS[currentIndex];
+  document.getElementById('question-count').textContent =
+    `Question ${currentIndex + 1} of ${QUESTIONS.length}`;
+  document.getElementById('score').textContent = score;
+  document.getElementById('question-text').textContent = q.question;
+  document.getElementById('feedback').textContent = '';
+  document.getElementById('feedback').className = 'trivia-feedback';
+  document.getElementById('next-btn').disabled = true;
+  document.getElementById('next-btn').textContent =
+    currentIndex === QUESTIONS.length - 1 ? 'See results →' : 'Next →';
+
+  const optionsEl = document.getElementById('options');
+  optionsEl.innerHTML = '';
+  q.options.forEach(opt => {
+    const btn = document.createElement('button');
+    btn.className = 'trivia-option';
+    btn.textContent = opt;
+    btn.onclick = () => selectAnswer(btn, opt);
+    optionsEl.appendChild(btn);
+  });
+}
+
+function selectAnswer(btn, choice) {
+  if (answered) return;
+  answered = true;
+  const q = QUESTIONS[currentIndex];
+  const feedback = document.getElementById('feedback');
+  const buttons = document.querySelectorAll('.trivia-option');
+
+  buttons.forEach(b => {
+    b.disabled = true;
+    if (b.textContent === q.correct) b.classList.add('correct');
+  });
+
+  if (choice === q.correct) {
+    score++;
+    document.getElementById('score').textContent = score;
+    btn.classList.add('correct');
+    feedback.textContent = 'Correct!';
+    feedback.className = 'trivia-feedback correct';
+  } else {
+    btn.classList.add('wrong');
+    feedback.textContent = `Not quite. ${q.hint || 'The answer was: ' + q.correct}`;
+    feedback.className = 'trivia-feedback wrong';
+  }
+  document.getElementById('next-btn').disabled = false;
+}
+
+function nextQuestion() {
+  currentIndex++;
+  if (currentIndex >= QUESTIONS.length) {
+    showResults();
+  } else {
+    showQuestion();
+  }
+}
+
+function showResults() {
+  document.getElementById('trivia-game').style.display = 'none';
+  document.getElementById('trivia-end').style.display = 'block';
+  const pct = Math.round((score / QUESTIONS.length) * 100);
+  document.getElementById('final-message').textContent =
+    `You got ${score} out of ${QUESTIONS.length} (${pct}%).`;
+  if (pct === 100) document.getElementById('final-title').textContent = 'Perfect score!';
+  else if (pct >= 60) document.getElementById('final-title').textContent = 'Pretty good!';
+  else document.getElementById('final-title').textContent = 'Keep learning about me!';
+}
+
+function resetGame() {
+  document.getElementById('trivia-end').style.display = 'none';
+  document.getElementById('trivia-game').style.display = 'none';
+  document.getElementById('trivia-start').style.display = 'block';
+}
+</script>
+</body>
+</html>
